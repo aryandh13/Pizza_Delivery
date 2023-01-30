@@ -1,0 +1,54 @@
+<script> 
+	function valid() {
+		var name =
+			document.forms["RegForm"]["username"];
+		var email = document.getElementById("email").value;
+		 var regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+		var phone = document.getElementById("phone").value;
+			 
+		 
+		 
+			 
+		 
+	
+		if (name.value == "") {
+			window.alert("Please enter your name.");
+			name.focus();
+			return false;
+		}
+	
+		 
+		 
+		
+		   }
+		   if (phone == "") {
+			window.alert("Please enter your telephone number.");
+			 phone.focus();
+			return false;
+		}
+		if(isNaN(phone)){
+			window.alert("Please enter only numeric value");
+			phone.focus();
+			return false;
+		}
+		if(phone.length<10 || phone.length>10 ){
+			window.alert("Please enter valid phone number");
+			phone.focus();
+			return false;
+		}
+	
+		 if(regx.test(email)){
+			  return true;
+		 }
+		 else{
+			 window.alert("Please enter valid email");
+			 return false;
+		 }
+		 
+			  
+	  
+		
+	
+				return true;
+		
+	</script>
